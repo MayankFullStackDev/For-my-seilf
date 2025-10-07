@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Diksha 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 50%, #fff0f5 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* 🎉 Birthday Section */
+    .birthday-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .birthday-section h1 {
+      font-size: 3rem;
+      color: #d63384;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 10px rgba(214, 51, 132, 0.3);
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    .birthday-section p {
+      font-size: 1.2rem;
+      color: #8e44ad;
+      line-height: 1.7;
+      max-width: 650px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .birthday-emoji {
+      font-size: 2.5rem;
+      animation: bounce 2s ease-in-out infinite;
+      margin-top: 1rem;
+    }
+
+    /* ✨ Memories Section */
+    .memories-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(230, 179, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .memories-section h2 {
+      font-size: 2.3rem;
+      color: #9c27b0;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .memories-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #ff9eb5, #e6b3ff);
+      border-radius: 2px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .photo-card {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(255, 182, 193, 0.25);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      display: block;
+    }
+
+    .photo-caption {
+      font-size: 1.05rem;
+      color: #8e44ad;
+      font-weight: 600;
+      margin-top: 0.8rem;
+    }
+
+    .photo-description {
+      font-size: 0.9rem;
+      color: #9c27b0;
+      font-style: italic;
+      opacity: 0.85;
+      margin-top: 0.2rem;
+    }
+
+    /* 💌 Final Message */
+    .final-message {
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(230, 179, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    .final-message p {
+      font-size: 1.1rem;
+      color: #8e44ad;
+      line-height: 1.7;
+      max-width: 650px;
+      margin: 0 auto 1.5rem;
+      font-style: italic;
+    }
+
+    .signature {
+      font-size: 1rem;
+      color: #d63384;
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+
+    /* 💕 Animations */
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 2px 10px rgba(214, 51, 132, 0.3); }
+      50% { text-shadow: 0 2px 20px rgba(214, 51, 132, 0.6), 0 0 30px rgba(255, 182, 193, 0.4); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-6px); }
+    }
+
+    /* 💖 Floating Hearts */
+    .floating-heart {
+      position: fixed;
+      color: #ff9eb5;
+      font-size: 1.3rem;
+      pointer-events: none;
+      animation: floatHeart 8s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-100px) translateX(30px) rotate(360deg); opacity: 0; }
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 768px) {
+      .birthday-section h1 {
+        font-size: 2.2rem;
+      }
+
+      .birthday-section p {
+        font-size: 1rem;
+      }
+
+      .memories-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .photo-caption {
+        font-size: 1rem;
+      }
+
+      .photo-description {
+        font-size: 0.85rem;
+      }
+
+      .final-message p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <section class="birthday-section">
+      <h1>🎉 Happy Birthday Diksha! 🎉</h1>
+      <p>You make every day brighter — wishing you endless smiles, love, and happiness 💖</p>
+      <div class="birthday-emoji">🎂</div>
+    </section>
+
+    <section class="memories-section">
+      <h2>✨ Our Beautiful Memories ✨</h2>
+
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="./dik1.jpg" alt="Unforgettable Memory">
+          <div class="photo-caption">Unforgettable</div>
+          <div class="photo-description">That perfect day we'll never forget</div>
+        </div>
+
+        <div class="photo-card">
+          <img src="./diksh2.jpg" alt="Pure Joy">
+          <div class="photo-caption">Pure Joy</div>
+          <div class="photo-description">Laughter that echoed for hours</div>
+        </div>
+
+        <div class="photo-card">
+          <img src="./diksh3.jpg" alt="Best Days">
+          <div class="photo-caption">Best Days</div>
+          <div class="photo-description">Simple moments, precious memories</div>
+        </div>
+
+        <div class="photo-card">
+          <img src="./diksh4.jpg" alt="Adventure Time">
+          <div class="photo-caption">Adventure Time</div>
+          <div class="photo-description">Exploring the world together</div>
+        </div>
+
+        <div class="photo-card">
+          <img src="./diksha6.jpg" alt="Heart to Heart">
+          <div class="photo-caption">Heart to Heart</div>
+          <div class="photo-description">Deep talks and endless support</div>
+        </div>
+
+        <div class="photo-card">
+          <img src="./diksha8.jpg" alt="Shining Bright">
+          <div class="photo-caption">Shining Bright</div>
+          <div class="photo-description">You lighting up every room</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-message">
+      <p>Diksha, your smile and warmth make the world a happier place. Thank you for always being so amazing and kind. 💕</p>
+      <p>May this year bring you success, laughter, and all the love your heart can hold!</p>
+      <div class="birthday-emoji">🎁</div>
+      <div class="signature">With all my love,<br>Your Best Friend Forever 💕</div>
+    </section>
+  </div>
+
+  <script>
+    function createFloatingHearts() {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerHTML = Math.random() > 0.5 ? '💖' : '💕';
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.animationDelay = Math.random() * 2 + 's';
+        heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 9000);
+      }, 2000);
+    }
+    window.onload = createFloatingHearts;
+  </script>
+
+</body>
+</html>
